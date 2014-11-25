@@ -5,7 +5,7 @@ before_install:
   - export PATH="/home/travis/.evm/bin:$PATH"
   - evm install emacs-24.4-bin
   - evm install $EVM_EMACS --use --force
-  - cask
+  - cask --debug
   - EMACS=$(evm bin emacs-24.4-bin) make start-server
 env:
   - EVM_EMACS=emacs-24.1-bin
